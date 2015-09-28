@@ -1,0 +1,36 @@
+<div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 side hidden-sm">
+
+<div class="container-fluid span well">
+						<div class="row-fluid">
+							<div class="span9">
+								
+								<div class="page-header">
+  <h1>Verify URLs</h1>
+</div>  
+<form action="/shortened_urls/convert" class="button_to" data-remote="true" method="get">
+<div class="input-group">
+     <span class="input-group-btn">
+        <input type="submit" class="btn btn-primary" value="Convert To Shorten<" name="commit">
+        <!-- <button class="btn btn-primary" type="button">Convert To Shorten</button> --!>
+      </span>
+      <%= text_field_tag :url,nil, :class => 'form-control', :placeholder => "Please Enter Your URL",:required => true %>
+  </div>
+</form>
+<br/>
+<form action="/shortened_urls/expand" class="button_to" data-remote="true" method="get">
+  <div class="input-group">
+      <span class="input-group-btn">
+        <input type="submit" class="btn btn-primary" value="Convert To Original" name="commit">
+      </span>
+      <%= text_field_tag :url,nil, :class => 'form-control',:placeholder => "Please Enter Your Shorten URL",:required => true %>
+  </div>
+</form>
+</div>
+<div>
+<div>
+<div>
+<div>
+<br/>
+<div class="result">
+</div>
+<a href="/shortened_urls" class="btn btn-primary">All Links</a>
