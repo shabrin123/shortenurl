@@ -9,7 +9,7 @@ class Client
    extend ShortenerBase    
 
     def self.shorten(url, opts={})
-      unless url.include?("URL")
+      unless url.include?(URL)
         if url.is_a? String
           request = self.create_url(url)
         else
